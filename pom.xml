@@ -23,10 +23,7 @@
 
         <flexmark.version>0.64.0</flexmark.version>
         <guava.version>31.1-jre</guava.version>
-
-        <webjars.version>0.42</webjars.version>
-        <boostrap.version>4.6.1</boostrap.version>
-        <jquery.version>3.6.0</jquery.version>
+        <commons-io.version>2.11.0</commons-io.version>
     </properties>
 
     <dependencies>
@@ -49,21 +46,17 @@
             <version>${flexmark.version}</version>
         </dependency>
 
-        <!-- Web Jars -->
+        <!-- Test -->
         <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>webjars-locator</artifactId>
-            <version>${webjars.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>jquery</artifactId>
-            <version>${jquery.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>${boostrap.version}</version>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

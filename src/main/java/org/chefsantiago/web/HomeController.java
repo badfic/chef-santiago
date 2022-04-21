@@ -1,8 +1,8 @@
 package org.chefsantiago.web;
 
+import java.util.Map;
 import org.chefsantiago.service.Post;
 import org.chefsantiago.service.PostsService;
-import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -28,7 +28,7 @@ public class HomeController extends BaseController {
         return new ModelAndView("home", props);
     }
 
-    @GetMapping(value = "/{year:\\d{4}}/{month:\\d{2}}/{day:\\d{2}}/{slug}", produces = MediaType.TEXT_HTML_VALUE)
+    @GetMapping(value = "/{year:\\d{4}}/{month:\\d{2}}/{day:\\d{2}}/{slug}/", produces = MediaType.TEXT_HTML_VALUE)
     public ModelAndView getIndividualPost(@PathVariable int year, @PathVariable int month, @PathVariable int day, @PathVariable String slug) {
         Post post = postsService.getPost(year, month, day, slug);
 

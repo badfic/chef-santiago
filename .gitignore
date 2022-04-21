@@ -33,3 +33,7 @@ build/
 .vscode/
 
 .env
+
+public/20*
+public/404.html
+public/index.html
