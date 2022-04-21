@@ -28,7 +28,7 @@ public class HomeController extends BaseController {
         return new ModelAndView("home", props);
     }
 
-    @GetMapping(value = "/{year}/{month}/{day}/{slug}/", produces = MediaType.TEXT_HTML_VALUE)
+    @GetMapping(value = "/{year:\\d{4}}/{month:\\d{2}}/{day:\\d{2}}/{slug}", produces = MediaType.TEXT_HTML_VALUE)
     public ModelAndView getIndividualPost(@PathVariable int year, @PathVariable int month, @PathVariable int day, @PathVariable String slug) {
         Post post = postsService.getPost(year, month, day, slug);
 

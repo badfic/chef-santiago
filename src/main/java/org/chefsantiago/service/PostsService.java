@@ -81,7 +81,7 @@ public class PostsService {
     }
 
     private String makePermalink(LocalDate postDate, String slug) {
-        return String.format("/%s/%s/", PERMALINK_FORMATTER.format(postDate), slug);
+        return String.format("/%s/%s", PERMALINK_FORMATTER.format(postDate), slug);
     }
 
 }
