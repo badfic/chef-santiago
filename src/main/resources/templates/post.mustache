@@ -1,0 +1,22 @@
+{{> header}}
+
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-md-8 blog-main">
+            {{#post}}
+            <div class="blog-post">
+                <h2 class="blog-post-title"><a href="{{postPermalink}}">{{postTitle}}</a></h2>
+                <p class="blog-post-meta">{{postDatePretty}}</p>
+                <img src="{{postImage}}" class="img-fluid" alt="{{postTitle}} image">
+
+                {{{postContent}}}
+            </div>
+            {{/post}}
+        </div>
+
+        {{> sidebar}}
+
+    </div>
+</main>
+
+{{> footer}}
