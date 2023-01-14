@@ -1,5 +1,13 @@
 package org.chefsantiago.service;
 
-public record Post(String postTitle, String postPermalink, String postDatePretty, String postImage, String postExcerpt, String postContent) {
+import lombok.Value;
 
+@Value
+public class Post {
+    private String postTitle;
+    private String postPermalink;
+    private String postDatePretty;
+    private String postImage;
+    private String postExcerpt;
+    private String postContent;
 }

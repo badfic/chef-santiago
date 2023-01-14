@@ -52,13 +52,13 @@ public class PostsService {
                 Document document = parser.parseReader(new BufferedReader(new InputStreamReader(postResource)));
                 String postContent = renderer.render(document);
 
-                String postPermalink = makePermalink(metadata.postDate(), slug);
+                String postPermalink = makePermalink(metadata.getPostDate(), slug);
                 Post post = new Post(
-                        metadata.postTitle(),
+                        metadata.getPostTitle(),
                         postPermalink,
-                        PRETTY_FORMATTER.format(metadata.postDate()),
-                        metadata.banner(),
-                        metadata.excerpt(),
+                        PRETTY_FORMATTER.format(metadata.getPostDate()),
+                        metadata.getBanner(),
+                        metadata.getExcerpt(),
                         postContent);
 
                 mapBuilder.put(postPermalink, post);

@@ -37,7 +37,7 @@ public class HomeController extends BaseController {
         }
 
         Map<String, Object> props = commonProps();
-        props.put("pageTitle", post.postTitle());
+        props.put("pageTitle", post.getPostTitle());
         props.put("post", post);
         return new ModelAndView("post", props);
     }

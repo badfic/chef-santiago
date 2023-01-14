@@ -1,8 +1,7 @@
 package org.chefsantiago;
 
 import java.io.File;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import org.apache.commons.io.FileUtils;
 import org.chefsantiago.service.Post;
@@ -32,21 +31,21 @@ public class GenerateSiteTest {
         Assertions.assertNotNull(posts);
         Assertions.assertFalse(posts.isEmpty());
 
-        File publicRoot = Path.of("public").toFile();
+        File publicRoot = new File("public");
         File index = new File(publicRoot, "index.html");
 
         String homePage = testRestTemplate.getForObject("/", String.class);
-        Files.writeString(index.toPath(), homePage);
+        FileUtils.write(index, homePage, StandardCharsets.UTF_8);
 
         String page404 = testRestTemplate.getForObject("/404.html", String.class);
-        Files.writeString(new File(publicRoot, "404.html").toPath(), page404);
+        FileUtils.write(new File(publicRoot, "404.html"), page404, StandardCharsets.UTF_8);
 
         for (Post post : posts) {
-            String page = testRestTemplate.getForObject(post.postPermalink(), String.class);
-            File currentPageFile = new File(publicRoot, post.postPermalink() + "/index.html");
+            String page = testRestTemplate.getForObject(post.getPostPermalink(), String.class);
+            File currentPageFile = new File(publicRoot, post.getPostPermalink() + "/index.html");
             FileUtils.createParentDirectories(currentPageFile);
 
-            Files.writeString(currentPageFile.toPath(), page);
+            FileUtils.write(currentPageFile, page, StandardCharsets.UTF_8);
         }
     }
 

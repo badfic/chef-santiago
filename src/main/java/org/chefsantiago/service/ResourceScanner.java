@@ -56,12 +56,12 @@ public class ResourceScanner {
     public String[] getResourcesNamesIn(String path) throws IOException {
         // Get root dir URI
         Resource root = getResource(path);
-        String rootUri = URLDecoder.decode(root.getURI().toString().endsWith("/") ? root.getURI().toString() : root.getURI() + "/", StandardCharsets.UTF_8);
+        String rootUri = URLDecoder.decode(root.getURI().toString().endsWith("/") ? root.getURI().toString() : root.getURI() + "/", StandardCharsets.UTF_8.name());
 
         // Get direct children names
         return Arrays.stream(getResourcesIn(path)).map(resource -> {
             try {
-                String uri = URLDecoder.decode(resource.getURI().toString(), StandardCharsets.UTF_8);
+                String uri = URLDecoder.decode(resource.getURI().toString(), StandardCharsets.UTF_8.name());
 
                 boolean isFile = uri.indexOf("/", rootUri.length()) == -1;
                 if (isFile) {
