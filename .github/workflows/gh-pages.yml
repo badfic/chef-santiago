@@ -36,7 +36,7 @@ jobs:
           distribution: liberica
           cache: maven
       - run:
-          ./mvnw install
+          chmod +x mvnw && ./mvnw install
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
