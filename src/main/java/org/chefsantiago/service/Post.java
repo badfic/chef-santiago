@@ -1,13 +1,15 @@
 package org.chefsantiago.service;
 
+import java.time.LocalDate;
 import lombok.Value;
 
 @Value
 public class Post {
-    private String postTitle;
-    private String postPermalink;
-    private String postDatePretty;
-    private String postImage;
-    private String postExcerpt;
-    private String postContent;
+    String postTitle;
+    String postPermalink;
+    LocalDate postDate;
+    String postDatePretty;
+    String postImage;
+    String postExcerpt;
+    String postContent;
 }

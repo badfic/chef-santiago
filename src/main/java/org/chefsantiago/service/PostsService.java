@@ -14,6 +14,7 @@ import java.lang.invoke.MethodHandles;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Collection;
+import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +57,7 @@ public class PostsService {
                 Post post = new Post(
                         metadata.getPostTitle(),
                         postPermalink,
+                        metadata.getPostDate(),
                         PRETTY_FORMATTER.format(metadata.getPostDate()),
                         metadata.getBanner(),
                         metadata.getExcerpt(),
@@ -71,7 +73,7 @@ public class PostsService {
     }
 
     public Collection<Post> getPosts() {
-        return POSTS_MAP.values();
+        return POSTS_MAP.values().stream().sorted((a, b) -> b.getPostDate().compareTo(a.getPostDate())).collect(Collectors.toList());
     }
 
     public Post getPost(int year, int month, int day, String slug) {
