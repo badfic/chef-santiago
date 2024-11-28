@@ -24,4 +24,4 @@ Bake 25 minutes or until cornbread measures 200F in the center and has a light g
 Allow to cool for about 10 minutes and serve with butter or honey
 
 Inspired by
-[hhttps://www.seriouseats.com/moist-and-tender-brown-butter-cornbread-recipe]()
+[https://www.seriouseats.com/moist-and-tender-brown-butter-cornbread-recipe]()
