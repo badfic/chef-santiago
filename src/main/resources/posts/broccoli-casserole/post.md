@@ -17,4 +17,4 @@ Top with the crushed ritz crackers and pour the melted butter evenly over the cr
 Bake for 35 minutes or until set and golden brown.
 
 Inspired by
-[https://www.pauladeen.com/recipe/southern-broccoli-casserole-recipe/]()
+[https://www.pauladeen.com/recipe/southern-broccoli-casserole-recipe](https://www.pauladeen.com/recipe/southern-broccoli-casserole-recipe)

@@ -32,4 +32,4 @@ Drain the noodles then add them to the pot along with the sauce. Cook, stirring 
 Season to taste with salt and plate the dish, garnishing with sesame seeds and chili oil if desired.
 
 Inspired by
-[https://www.bonappetit.com/recipe/peanut-rice-noodles-with-pork-and-collard-greens]()
+[https://www.bonappetit.com/recipe/peanut-rice-noodles-with-pork-and-collard-greens](https://www.bonappetit.com/recipe/peanut-rice-noodles-with-pork-and-collard-greens)

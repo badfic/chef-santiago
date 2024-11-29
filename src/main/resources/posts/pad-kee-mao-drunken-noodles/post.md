@@ -24,4 +24,4 @@ Add the onion and bell pepper to the pan and cook for about 2 minutes until slig
 Salt to taste and serve with more thai basil, roasted sesame seeds, and chili oil.
 
 Inspired by
-[https://cooking.nytimes.com/recipes/1016835-pad-kee-mao]()
+[https://cooking.nytimes.com/recipes/1016835-pad-kee-mao](https://cooking.nytimes.com/recipes/1016835-pad-kee-mao)

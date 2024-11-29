@@ -19,4 +19,4 @@ Bake meatloaf for 1 hour or until desired internal temperature.
 Serve with extra cranberry sauce or gravy.
 
 Inspired by
-[https://thesouthernladycooks.com/thanksgiving-turkey-meatloaf/]()
+[https://thesouthernladycooks.com/thanksgiving-turkey-meatloaf](https://thesouthernladycooks.com/thanksgiving-turkey-meatloaf)
